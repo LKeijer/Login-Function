@@ -26,7 +26,7 @@ namespace Login_Function
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            string user =userNameTextBox.Text;
+            string user = userNameTextBox.Text;
             string pass = passwordTextBox.Text;
             Login login = new Login(user, pass);
             login.CheckLogin();
@@ -39,7 +39,6 @@ namespace Login_Function
             Login login = new Login(registerinfo);
             login.CheckRegister();
             
-
         }
     }
 }
