@@ -13,10 +13,16 @@ namespace Login_Function
     public partial class Form1 : Form
     {
         List<string> registerinfo = new List<string>();
+        public string ifLogged;
 
         public Form1()
         {
             InitializeComponent();
+        }
+
+        public Form1(string logged)
+        {
+            this.ifLogged = logged;
         }
 
         private void userNameLbl_Click(object sender, EventArgs e)
@@ -38,7 +44,11 @@ namespace Login_Function
             registerinfo.Add(passwordTextBox.Text);
             Login login = new Login(registerinfo);
             login.CheckRegister();
-            
+            if (ifLogged != "")
+            {
+                this.Close();
+                
+            }
         }
     }
 }

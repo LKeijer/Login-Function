@@ -57,11 +57,14 @@ namespace Login_Function
                 if(reader.Read())
                 {
                     MessageBox.Show("LOGIN SUCCESFUL");
+                    LoggedInForm LoggedForm = new LoggedInForm(user);
                 }
+
                 else
                 {
                     MessageBox.Show("Try logging in again!");
                 }
+
             }
             finally
             {
